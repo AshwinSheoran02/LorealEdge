@@ -286,7 +286,7 @@ export default function HomePage() {
           </div>
           <p className="text-body text-cream/70 mt-8">
             Starter &ldquo;Scalp Reset&rdquo; Kit — ₹{kit.price} · all five priced
-            ₹499–₹799, benchmarked against Minimalist, Bare Anatomy and Pilgrim.{" "}
+            ₹499–₹799.{" "}
             <Link href="/range" className="text-sage hover:underline">
               See the full range →
             </Link>
@@ -374,62 +374,7 @@ export default function HomePage() {
         </div>
       </motion.section>
 
-      {/* Section 6 — The Real Questions */}
-      <motion.section
-        className="bg-cream text-forest section-gap"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        variants={sectionReveal}
-      >
-        <div className="content-width">
-          <p className="text-eyebrow text-stone mb-6">THE REAL QUESTIONS</p>
-          <h2 className="text-display-lg text-forest mb-10 max-w-3xl">
-            What she&apos;s actually asking.
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
-            {[
-              {
-                question: "How do I adapt to this new urban life?",
-                answer:
-                  "Campus & PG onboarding sampling; Travel Mini Kit.",
-              },
-              {
-                question: "Why is my hair falling in clumps?",
-                answer:
-                  '"City-Water Test" — blame the environment, not her genes.',
-              },
-              {
-                question: "Do shower filters even work?",
-                answer:
-                  "Lead with Chelating agents (Sodium Phytate) + Piroctone Olamine.",
-              },
-              {
-                question: "Will this work immediately?",
-                answer:
-                  "10-min quick-commerce; instant softness as sensorial proof.",
-              },
-              {
-                question: "How do I keep this up?",
-                answer:
-                  "Scalp Recovery Serum + refill packs for daily defense.",
-              },
-            ].map((item) => (
-              <div
-                key={item.question}
-                className="bg-cream-warm rounded-md p-5"
-              >
-                <p className="font-display text-base font-medium text-forest mb-3 italic">
-                  &ldquo;{item.question}&rdquo;
-                </p>
-                <p className="text-caption text-stone">{item.answer}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </motion.section>
-
-      {/* Section 7 — The Routine Science */}
+      {/* Section 6 — Your Routine */}
       <motion.section
         className="bg-forest section-gap"
         initial="hidden"
@@ -438,31 +383,31 @@ export default function HomePage() {
         variants={sectionReveal}
       >
         <div className="content-width">
-          <p className="text-eyebrow text-sage-pale mb-6">THE ROUTINE SCIENCE</p>
+          <p className="text-eyebrow text-sage-pale mb-6">YOUR ROUTINE</p>
           <h2 className="text-display-lg text-cream mb-12 max-w-3xl">
-            Every step has a clinical reason.
+            Four steps. One healthy scalp.
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
                 step: "Cleanse",
                 actives: "Niacinamide + Prebiotics",
-                desc: "Chelating agents break the calcium/magnesium bonds hard water leaves — the one thing ordinary shampoo can't do.",
+                desc: "Breaks the mineral bonds hard water leaves on your scalp — the one thing ordinary shampoo can't do.",
               },
               {
                 step: "Detox",
-                actives: "Salicylic Acid + Phytate",
-                desc: "Weekly detox lifts pollution particulates and product residue trapped in sebum; rebalances the scalp.",
+                actives: "Salicylic Acid",
+                desc: "A weekly reset that lifts pollution, product buildup and excess oil trapped at the root.",
               },
               {
                 step: "Fortify",
                 actives: "Redensyl + Anagain",
-                desc: "Strengthens the root and helps reduce stress-driven shedding — the daily fortifier.",
+                desc: "Supports your hair's growth phase and helps reduce stress-driven shedding over time.",
               },
               {
                 step: "Repair",
                 actives: "Bhringraj + Kalonji",
-                desc: "Overnight barrier repair seals the scalp against tomorrow's exposure. Locks the routine in.",
+                desc: "Overnight barrier repair that calms and seals the scalp while you sleep.",
               },
             ].map((item) => (
               <div key={item.step} className="border-t border-cream/12 pt-6">
@@ -479,44 +424,7 @@ export default function HomePage() {
         </div>
       </motion.section>
 
-      {/* Section 8 — KPIs */}
-      <motion.section
-        className="bg-cream-warm text-forest section-gap"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        variants={sectionReveal}
-      >
-        <div className="content-width">
-          <p className="text-eyebrow text-stone mb-6">THE TARGETS</p>
-          <h2 className="text-display-lg text-forest mb-4 max-w-3xl">
-            We track cohorts, not impressions.
-          </h2>
-          <p className="text-body-lg text-stone mb-10 max-w-2xl">
-            Every KPI carries a target. We track trial, conversion, expansion
-            and loyalty — not vanity metrics.
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {[
-              { metric: "≥25%", label: "Trial-to-purchase" },
-              { metric: "≥30%", label: "Repeat rate" },
-              { metric: "≥1.8", label: "Products per order" },
-              { metric: "40%", label: "D2C share" },
-              { metric: "+15%", label: "Category growth" },
-              { metric: "0.3", label: "Viral coefficient" },
-            ].map((kpi) => (
-              <div key={kpi.label} className="text-center">
-                <p className="text-display-sm text-terracotta mb-1">
-                  {kpi.metric}
-                </p>
-                <p className="text-caption text-stone">{kpi.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </motion.section>
-
-      {/* Section 9 — Campaign */}
+      {/* Section 7 — Campaign */}
       <motion.section
         className="bg-forest-deep section-gap"
         initial="hidden"
