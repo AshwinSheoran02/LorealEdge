@@ -31,7 +31,7 @@ export default function RangePage() {
           <h1 className="text-display-xl text-cream mb-4">Five hero SKUs.</h1>
           <p className="text-body-lg text-cream/80 max-w-2xl">
             Scalp-first hair care, built like skincare. Clinical actives plus
-            Indian botanicals, at ₹399–₹599.
+            Indian botanicals, priced to compete.
           </p>
         </div>
       </section>
@@ -52,7 +52,7 @@ export default function RangePage() {
           >
             <div className="content-width">
               <div
-                className={`grid md:grid-cols-2 gap-12 items-center ${isReversed ? "md:direction-rtl" : ""}`}
+                className={`grid md:grid-cols-2 gap-12 items-start ${isReversed ? "md:direction-rtl" : ""}`}
               >
                 <div className={isReversed ? "md:order-2" : ""}>
                   <div className="w-full aspect-square bg-forest/5 rounded-md flex items-center justify-center">
@@ -65,7 +65,12 @@ export default function RangePage() {
                   <h2 className="text-display-lg text-forest mb-2">
                     {p.name}
                   </h2>
-                  <p className="text-price text-2xl mb-4">₹{p.price}</p>
+                  <div className="flex items-baseline gap-3 mb-4">
+                    <span className="text-price text-2xl">₹{p.price}</span>
+                    <span className="text-caption text-stone">
+                      Recommended MRP {p.priceRange}
+                    </span>
+                  </div>
                   <p className="text-body-lg text-stone mb-6">{p.concern}</p>
 
                   <div className="space-y-4 mb-6">
@@ -104,6 +109,29 @@ export default function RangePage() {
                         <p className="text-body text-forest">{p.notFor}</p>
                       </div>
                     )}
+                  </div>
+
+                  {/* Competitor Benchmarks */}
+                  <div className="border border-forest/10 rounded-md p-5 mb-6">
+                    <p className="text-eyebrow text-stone mb-3">
+                      MARKET BENCHMARKS
+                    </p>
+                    <div className="space-y-2 mb-3">
+                      {p.benchmarks.map((b) => (
+                        <div
+                          key={b.name}
+                          className="flex items-center justify-between text-sm"
+                        >
+                          <span className="text-stone">{b.name}</span>
+                          <span className="text-forest font-medium whitespace-nowrap ml-4">
+                            {b.price}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                    <p className="text-caption text-stone/70">
+                      {p.marketContext}
+                    </p>
                   </div>
 
                   <Link
