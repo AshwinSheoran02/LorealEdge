@@ -113,10 +113,28 @@ export default function HomePage() {
           <motion.p
             variants={fadeUp}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="text-display-sm text-cream/80 mb-10"
+            className="text-display-sm text-cream/80 mb-8"
           >
             Care that starts at the scalp.
           </motion.p>
+
+          {/* YouTube Shorts embed */}
+          <motion.div
+            variants={fadeUp}
+            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            className="flex justify-center mb-10"
+          >
+            <div className="w-48 sm:w-56 rounded-[20px] overflow-hidden shadow-2xl">
+              <iframe
+                src="https://www.youtube.com/embed/oqiV1TDr3sM"
+                title="ROOTED — L'Oréal India advertisement"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full aspect-[9/16] border-0"
+              />
+            </div>
+          </motion.div>
+
           <motion.div
             variants={fadeUp}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
@@ -498,7 +516,7 @@ export default function HomePage() {
         </div>
       </motion.section>
 
-      {/* Section 9 — Campaign + Video */}
+      {/* Section 9 — Campaign */}
       <motion.section
         className="bg-forest-deep section-gap"
         initial="hidden"
@@ -506,55 +524,38 @@ export default function HomePage() {
         viewport={{ once: true, amount: 0.2 }}
         variants={sectionReveal}
       >
-        <div className="content-width">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="text-center md:text-left">
-              <h2 className="text-display-xl text-cream mb-6">
-                &ldquo;Fix the Root, Not the Reel.&rdquo;
-              </h2>
-              <p className="text-body-lg text-cream/70 mb-12">
-                Real creators. Real derms. Real hair-fall stories. No filters, no
-                fake promises.
-              </p>
-              <div className="grid grid-cols-3 gap-6 text-left mb-12">
-                {[
-                  {
-                    title: "Reframe",
-                    desc: "Scalp, not strands — a category no one owns.",
-                  },
-                  {
-                    title: "Emotion",
-                    desc: "We answer anxiety, not vanity.",
-                  },
-                  {
-                    title: "Muscle",
-                    desc: "L'Oréal R&D + distribution indie brands can't match.",
-                  },
-                ].map((col) => (
-                  <div key={col.title}>
-                    <p className="text-eyebrow text-sage-pale mb-3">{col.title}</p>
-                    <p className="text-body text-cream">{col.desc}</p>
-                  </div>
-                ))}
+        <div className="content-width text-center">
+          <h2 className="text-display-xl text-cream mb-6">
+            &ldquo;Fix the Root, Not the Reel.&rdquo;
+          </h2>
+          <p className="text-body-lg text-cream/70 mb-16 max-w-2xl mx-auto">
+            Real creators. Real derms. Real hair-fall stories. No filters, no
+            fake promises.
+          </p>
+          <div className="grid md:grid-cols-3 gap-8 text-left mb-16">
+            {[
+              {
+                title: "Reframe",
+                desc: "Scalp, not strands — a category no one owns.",
+              },
+              {
+                title: "Emotion",
+                desc: "We answer anxiety, not vanity.",
+              },
+              {
+                title: "Muscle",
+                desc: "L'Oréal R&D + distribution indie brands can't match.",
+              },
+            ].map((col) => (
+              <div key={col.title}>
+                <p className="text-eyebrow text-sage-pale mb-3">{col.title}</p>
+                <p className="text-body-lg text-cream">{col.desc}</p>
               </div>
-              <p className="font-display text-xl text-cream italic">
-                Indie brands sell strands. We own the root.
-              </p>
-            </div>
-
-            {/* YouTube Shorts Embed */}
-            <div className="flex justify-center">
-              <div className="w-72 rounded-[28px] overflow-hidden shadow-2xl">
-                <iframe
-                  src="https://www.youtube.com/embed/oqiV1TDr3sM"
-                  title="ROOTED — L'Oréal India advertisement"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full aspect-[9/16] border-0"
-                />
-              </div>
-            </div>
+            ))}
           </div>
+          <p className="font-display text-xl text-cream italic">
+            Indie brands sell strands. We own the root.
+          </p>
         </div>
       </motion.section>
 
