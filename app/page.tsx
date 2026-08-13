@@ -113,32 +113,15 @@ export default function HomePage() {
           <motion.p
             variants={fadeUp}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="text-display-sm text-cream/80 mb-8"
+            className="text-display-sm text-cream/80 mb-10"
           >
             Care that starts at the scalp.
           </motion.p>
 
-          {/* YouTube Shorts embed */}
           <motion.div
             variants={fadeUp}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="flex justify-center mb-10"
-          >
-            <div className="w-48 sm:w-56 rounded-[20px] overflow-hidden shadow-2xl">
-              <iframe
-                src="https://www.youtube.com/embed/oqiV1TDr3sM"
-                title="ROOTED — L'Oréal India advertisement"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full aspect-[9/16] border-0"
-              />
-            </div>
-          </motion.div>
-
-          <motion.div
-            variants={fadeUp}
-            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10"
           >
             <Link
               href="/scalp-match"
@@ -152,6 +135,23 @@ export default function HomePage() {
             >
               See the range →
             </Link>
+          </motion.div>
+
+          {/* YouTube Shorts embed */}
+          <motion.div
+            variants={fadeUp}
+            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            className="flex justify-center"
+          >
+            <div className="w-48 sm:w-56 rounded-[20px] overflow-hidden shadow-2xl">
+              <iframe
+                src="https://www.youtube.com/embed/oqiV1TDr3sM"
+                title="ROOTED — L'Oréal India advertisement"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full aspect-[9/16] border-0"
+              />
+            </div>
           </motion.div>
         </motion.div>
       </section>
