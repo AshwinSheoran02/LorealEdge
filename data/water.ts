@@ -8,7 +8,6 @@ export interface CityWater {
 
 const cityHardnessMap: Record<string, WaterHardness> = {
   // Very hard
-  Gurgaon: "very_hard",
   Gurugram: "very_hard",
   Jaipur: "very_hard",
   Ahmedabad: "very_hard",
