@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { products, kit } from "@/data/products";
 import { Nav } from "@/components/site/Nav";
@@ -54,10 +55,14 @@ export default function RangePage() {
                 className={`grid md:grid-cols-2 gap-12 items-center ${isReversed ? "md:direction-rtl" : ""}`}
               >
                 <div className={isReversed ? "md:order-2" : ""}>
-                  <div className="w-full aspect-square bg-forest/5 rounded-md flex items-center justify-center">
-                    <span className="text-eyebrow text-sage-pale text-lg">
-                      {p.name}
-                    </span>
+                  <div className="w-full aspect-square bg-forest/5 rounded-md flex items-center justify-center p-8 md:p-12">
+                    <Image
+                      src={`/products/${id}.png`}
+                      alt={`ROOTED ${p.name} — ${p.concern}`}
+                      width={400}
+                      height={400}
+                      className="object-contain w-full h-full"
+                    />
                   </div>
                 </div>
                 <div className={isReversed ? "md:order-1" : ""}>

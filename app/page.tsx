@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { products, kit } from "@/data/products";
 import { Nav } from "@/components/site/Nav";
@@ -271,10 +272,14 @@ export default function HomePage() {
                   key={id}
                   className="flex-shrink-0 w-56 md:w-auto snap-start bg-cream-warm rounded-md p-5 shadow-card"
                 >
-                  <div className="w-full aspect-square bg-cream rounded-sm mb-4 flex items-center justify-center">
-                    <span className="text-eyebrow text-sage-pale">
-                      {p.name}
-                    </span>
+                  <div className="w-full aspect-square bg-cream rounded-sm mb-4 flex items-center justify-center p-4">
+                    <Image
+                      src={`/products/${id}.png`}
+                      alt={`ROOTED ${p.name}`}
+                      width={200}
+                      height={200}
+                      className="object-contain w-full h-full"
+                    />
                   </div>
                   <h3 className="font-body font-semibold text-forest text-sm mb-1">
                     {p.name}
